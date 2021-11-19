@@ -1,0 +1,374 @@
+body {
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-top: 0px;
+}
+
+.uis_Navigate_Table {
+    padding-left: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    background-color: White;
+    border-right: #b5b6b5 1px solid;
+    border-bottom: #b5b6b5 1px solid;
+    border-top: #b5b6b5 1px solid;
+    border-left: #b5b6b5 1px solid;
+}
+
+.uis_Navigate_Header {
+    font-weight: bold;
+    font-size: 11px;
+    background-image: url(Portlets/UIS_MySpace/Images/bg.gif);
+    color: #00458c;
+    font-family: Tahoma;
+}
+
+.uis_Navigate_Item {
+    font-weight: bold;
+    font-size: 11px;
+    color: Blue;
+    cursor: hand;
+    padding-bottom: 3px;
+    font-family: verdana;
+    text-decoration: none;
+}
+
+.uis_Navigate_Item a {
+    font-weight: bold;
+    font-size: 11px;
+    color: Blue;
+    cursor: hand;
+    padding-bottom: 3px;
+    font-family: verdana;
+    text-decoration: none;
+}
+
+.uis_Navigate_Item a:hover {
+    font-weight: bold;
+    font-size: 11px;
+    color: Red;
+    cursor: hand;
+    padding-bottom: 3px;
+    font-family: verdana;
+    text-decoration: none;
+}
+
+.uis_title {
+    font-weight: bold;
+    font-size: 12px;
+    background-image: url(Portlets/UIS_MySpace/Images/bg_title.gif);
+    color: White;
+    font-family: Tahoma;
+    height: 20pt;
+}
+
+
+/*-----LOGIN-----------------------*/
+
+.module_td_dl {
+    padding-left: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    background-color: White;
+    BORDER-RIGHT: #b5b6b5 1px solid;
+    BORDER-bottom: #b5b6b5 1px solid;
+    BORDER-top: #b5b6b5 1px solid;
+    BORDER-left: #b5b6b5 1px solid;
+    text-decoration: none;
+}
+
+.loginmodule_table_dl {
+    BORDER-RIGHT: #93BAA5 1px solid;
+    BORDER-bottom: #93BAA5 1px solid;
+    BORDER-top: #93BAA5 1px solid;
+    BORDER-left: #93BAA5 1px solid;
+}
+
+.loginmodule_table_Bottom_dl {
+    BORDER-bottom: #93BAA5 1px solid;
+}
+
+.loginmodule_table_Top_Bottom_dl {
+    BORDER-bottom: #93BAA5 1px solid;
+    border-top: #93BAA5 1px solid;
+}
+
+.Scheduled_table_dl {
+    BORDER-RIGHT: #00458c 2px solid;
+    BORDER-bottom: #00458c 2px solid;
+    BORDER-top: #00458c 2px solid;
+    BORDER-left: #00458c 2px solid;
+    font-family: Tahoma;
+    border: #00458c 2px solid;
+}
+
+.uis_Navigate_Header_dl {
+    font-weight: bold;
+    font-size: 11px;
+    background-image: url(Portlets/UIS_MySpace/Images/bg.gif);
+    color: #00458c;
+    font-family: Tahoma;
+}
+
+.loginmodule_header_dl {
+    COLOR: #000000;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    font-size: 11px;
+    font-family: tahoma;
+    height: 25px;
+    text-align: left;
+    padding-left: 5px;
+    background-color: #E7EFFF;
+}
+
+.Student_menu_dl {
+    background-image: url(Portlets/UIS_MySpace/Images/bg.gif);
+    font-family: Tahoma;
+    font-size: 11px;
+    text-decoration: none;
+    color: #860609;
+}
+
+.Studentinfo {
+    font-family: Times New Roman;
+    font-size: 14px;
+    text-decoration: none;
+    color: Black;
+}
+
+.Inbox_header_dl {
+    height: 20;
+    FONT-SIZE: 11px;
+    text-align: left;
+    FONT-FAMILY: Verdana;
+    background-color: #0087C5;
+    color: White;
+    font-weight: bold;
+    padding-left: 15;
+}
+
+.studyprogram_tabledetails_td_header_dl {
+    FONT-SIZE: 11px;
+    COLOR: White;
+    font-weight: bold;
+    text-align: left;
+    FONT-FAMILY: Tahoma;
+    height: 35;
+    BORDER-bottom: #b5b6b5 1px solid;
+    BORDER-RIGHT: #b5b6b5 1px solid;
+    background-color: #0099FF;
+}
+
+.studyprogram_tabledetails_td_header_aligncenter_dl {
+    FONT-SIZE: 11px;
+    COLOR: Maroon;
+    font-weight: bold;
+    text-align: center;
+    FONT-FAMILY: Tahoma;
+    height: 35;
+    BORDER-bottom: #b5b6b5 1px solid;
+    BORDER-RIGHT: #b5b6b5 1px solid;
+    background-image: url(Portlets/UIS_MySpace/Images/bg.gif);
+}
+
+.studyprogram_semeter_dl {
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: bold;
+    color: Navy;
+}
+
+.studyprogram_tabledetails_td_content_dl {
+    FONT-SIZE: 10px;
+    COLOR: black;
+    text-align: left;
+    FONT-FAMILY: Tahoma;
+    height: 20;
+    BORDER-bottom: #b5b6b5 1px solid;
+    BORDER-RIGHT: #b5b6b5 1px solid;
+}
+
+.studyprogram_tabledetails_td_content_aligncenter_dl {
+    FONT-SIZE: 10px;
+    COLOR: black;
+    text-align: center;
+    FONT-FAMILY: Tahoma;
+    height: 20;
+    BORDER-bottom: #b5b6b5 1px solid;
+    BORDER-RIGHT: #b5b6b5 1px solid;
+}
+
+.studyprogram_tabledetails_td_content_bottom_left_dl {
+    FONT-SIZE: 11px;
+    COLOR: black;
+    text-align: left;
+    FONT-FAMILY: Tahoma;
+    height: 20;
+    BORDER-bottom: #b5b6b5 1px solid;
+    BORDER-RIGHT: #b5b6b5 1px solid;
+    font-weight: bold;
+}
+
+.studyprogram_tabledetails_td_content_bottom_right_dl {
+    FONT-SIZE: 11px;
+    COLOR: black;
+    text-align: right;
+    FONT-FAMILY: Tahoma;
+    height: 20;
+    BORDER-bottom: #b5b6b5 1px solid;
+    BORDER-RIGHT: #b5b6b5 1px solid;
+    font-weight: bold;
+}
+
+.studyprogram_tabledetails_td_content_bottom_center_dl {
+    FONT-SIZE: 11px;
+    COLOR: black;
+    text-align: center;
+    FONT-FAMILY: Tahoma;
+    height: 20;
+    BORDER-bottom: #b5b6b5 1px solid;
+    BORDER-RIGHT: #b5b6b5 1px solid;
+    font-weight: bold;
+}
+
+.StudentInfoDetails_dl {
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: bold;
+    color: #0051C6;
+}
+
+.StudentInfoDetails_normal_dl {
+    font-family: Tahoma;
+    font-size: 11px;
+    color: #0051C6;
+}
+
+.StudentInfoText_dl {
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.studyprogram_title_dl {
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.button_dl {
+    BORDER-RIGHT: #86A0BA 1px solid;
+    BORDER-TOP: #86A0BA 1px solid;
+    BORDER-LEFT: #86A0BA 1px solid;
+    BORDER-BOTTOM: #86A0BA 1px solid;
+    FONT-SIZE: 11px;
+    background-color: #E7EFFF;
+    color: #336699;
+    padding-top: 3px;
+}
+
+.uis_Navigate_Item_dl {
+    font-weight: bold;
+    font-size: 10px;
+    color: blue;
+    cursor: hand;
+    padding-bottom: 3px;
+    font-family: verdana;
+    text-decoration: none;
+}
+
+.uis_Navigate_Item_dl a {
+    font-weight: bold;
+    font-size: 10px;
+    color: blue;
+    cursor: hand;
+    padding-bottom: 3px;
+    font-family: verdana;
+    text-decoration: none;
+}
+
+.uis_Navigate_Item_dl a:hover {
+    font-weight: bold;
+    font-size: 10px;
+    color: Red;
+    cursor: hand;
+    padding-bottom: 3px;
+    font-family: verdana;
+    text-decoration: none;
+}
+
+.td.uis_Navigate_Item_dl :link {
+    text-decoration: none;
+    color: blue;
+}
+
+.td.uis_Navigate_Item_dl :visited {
+    text-decoration: none;
+    color: #AD0000;
+}
+
+.td.uis_Navigate_Item_dl :hover {
+    text-decoration: none;
+    color: Black;
+}
+
+.td.uis_Navigate_Item_dl :active {
+    text-decoration: none;
+    color: red;
+}
+
+.StudentContentHeaderText_left_dl {
+    background-image: url(Portlets/UIS_MySpace/Images/bgmenu_0.gif);
+    font-family: Verdana;
+    font-size: 11px;
+    font-weight: bold;
+    color: #6b51bd;
+    text-align: left;
+}
+
+.StudentContentHeaderText_dl {
+    background-image: url(Portlets/UIS_MySpace/Images/bgmenu_1.gif);
+    font-family: Verdana;
+    font-size: 11px;
+    font-weight: bold;
+    color: #6b51bd;
+    text-align: left;
+}
+
+.StudentContentHeaderText_right_dl {
+    background-image: url(Portlets/UIS_MySpace/Images/bgmenu_2.gif);
+    font-family: Verdana;
+    font-size: 11px;
+    font-weight: bold;
+    color: #6b51bd;
+    text-align: left;
+}
+
+.ThongBao_dl {
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+.studyprogram_1_dl {
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Tahoma;
+    height: 20;
+    BORDER-bottom: #b5b6b5 1px solid;
+    BORDER-RIGHT: #b5b6b5 1px solid;
+}
+
+.topic_title {
+    padding: 0px 0px 10px 10px;
+    font: normal 11px Arial, Helvetica, sans-serif;
+    color: #999999;
+}

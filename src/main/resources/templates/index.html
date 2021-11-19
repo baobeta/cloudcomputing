@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <link rel="icon" href="/Content/Images/favicon.ico" type="image/x-icon"/>
+    <title>TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM - Trang đăng kí học ph&#226;̀n</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <meta http-eqyuiv="Content-Type" content="text/html; charset=utf-8">
+    <link th:href="@{/Content/css/style_main.css}" rel="stylesheet"/>
+    <script th:src="@{/Scripts/jquery-1.7.1.js}" type="text/javascript"></script>
+    <!--   Jquery ui -->
+    <script th:src="@{/Content/ui/jquery.easyui.min.js}" type="text/javascript"></script>
+    <link th:href="@{/Content/ui/themes/default/easyui.css}" rel="stylesheet"/>
+    <link th:href="@{/Content/css/main.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/Content/css/inside.css}" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+<!--Page-->
+<div class="page">
+    <form name="frmform" method="post">
+        <!--Panel top-->
+        <div class="paneltop">
+            <!--Phan to-->
+            <!--Phan banner-->
+            <div class="banner">
+                <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686261/banner_UTE_hmkkep.png"/></div>
+            <!--Phan menu2-->
+            <div class="blog_menu2">
+                <div class="img1_menu2">
+                    <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/img2_menu2_dpqtjo.jpg"/>
+                </div>
+                <ul class="menu2">
+                    <li><a>Sinh viên: [[${name}]] <span></span> </a></li>
+                    <li id="id_menu2"><a th:if="${#request.userPrincipal !=  null}" th:href="@{/logout}">Thoát</a></li>
+
+                </ul>
+                <div class="img2_menu2">
+                    <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/img2_menu2_dpqtjo.jpg"/>
+                </div>
+            </div>
+            <!--Phan menu3-->
+            <div class="blog_menu3">
+                <div class="img1_menu3">
+                    <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/img1_menu3_tlfago.jpg"
+                         class="img1_menu2"/></div>
+                <ul class="menu3">
+                    <li>
+                        <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686268/hoa_mx95xq.png"
+                             class="img"/><a th:href="@{/}">ĐĂNG KÝ HỌC PHẦN
+
+                        <span></span></a></li>
+                </ul>
+                <div class="img2_menu3">
+                    <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/img2_menu3_nng58d.jpg"
+                         class="img2_menu2"/></div>
+            </div>
+
+
+            <!--Phan quang cao va menu-->
+        </div>
+        <!--End Panel top-->
+        <!--container-->
+        <div class="container">
+            <div style="margin: auto; max-width: 1200px; width:100%">
+
+                <div class="wrapper_vb">
+                    <div class="blog_menu4_HP">
+                        <a href="#">Chọn chương trình đào tạo:
+                            <select id="chuongtrinhdaotao" name="chuongtrinhdaotao" onchange="setvalue()">
+                                <option value="tVVglg982tY=">19110</option>
+                            </select>
+                        </a>
+                    </div>
+
+                    <div style="height:500px ;width:100% ;overflow:auto">
+                        <table cellpadding="0px" cellspacing="0px" width="100%">
+                            <tr class="title_topic_vb">
+                                <th class="col_topic_1">STT</th>
+                                <th class="col_topic_3">Tên môn</th>
+                                <th class="col_topic_4">Loại môn</th>
+                                <th class="col_topic_4">STC</th>
+                            </tr>
+
+                            <tr class="row_w" th:each="subject : ${listSubjects}">
+                                <td class="col1" width="70px">[[${subject.id}]]</td>
+                                <td class="col3">[[${subject.nameSubject}]]</td>
+                                <td class="col4">[[${subject.categorySubject}]]</td>
+                                <td class="col4">[[${subject.totalCredits}]]</td>
+                            </tr>
+
+
+                        </table>
+                    </div>
+                    <div class="dangky">
+
+                        <a id="btn" class="easyui-linkbutton" th:href="@{/registersubjects}" style="border-width: 2px;
+                                                                                                                border-style: outset;
+                                                                                                                border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+                                                                                                                border-image: initial;">
+                            Đăng kí
+                        </a>
+
+                        <a id="btn" class="easyui-linkbutton" th:href="@{/result}" style="border-width: 2px;
+                                                                                                                border-style: outset;
+                                                                                                                border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+                                                                                                                border-image: initial;">
+                            Kết quả đăng kí
+                        </a>
+
+
+                        <input type="hidden" name="buttonID" id="buttonID" value=""/>
+                    </div>
+
+                </div>
+
+
+                <!-- Thong bao khan -->
+
+
+                <!--End wrapper-->
+
+                <!--End wrapper-->
+            </div>
+
+            <!--End panelcontent1-->
+        </div>
+    </form>      <!--End info_container-->
+</div>
+
+
+<!--footer-->
+<div class="panelbottom">
+    <div class="content_bottom">
+        <div class="trai">
+            <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/letf_bottom_ab9bbw.jpg"/></div>
+        <div class="thongtin">
+            <span class="tentruong">TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM</span>
+            <br/>
+            <span>S&#244;́ 1 Võ Văn Ng&#226;n , Qu&#226;̣n Thủ Đức, TP.HCM</span>
+            <br/>
+            <span>Điện thoại: (84-8) 37221223</span>
+        </div>
+        <div class="phai">
+            <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/right_bottom_qoxfmq.jpg"/></div>
+    </div>
+</div>
+<!--end footer-->
+
+<!--End Page-->
+
+<script type="text/javascript">
+
+
+</script>
+</body>
+
+</html>
+

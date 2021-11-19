@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="icon" th:href="@{/Content/Images/favicon.ico}" type="image/x-icon" />
+    <title>TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM - Trang đăng kí học ph&#226;̀n</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+    <meta http-eqyuiv="Content-Type" content="text/html; charset=utf-8">
+    <link th:href="@{/Content/css/style_main.css}" rel="stylesheet" />
+    <script th:src="@{/Scripts/jquery-1.7.1.js}" ></script>
+    <!--   Jquery ui -->
+    <script th:src="@{/Content/ui/jquery.easyui.min.js}"></script>
+    <link th:href="@{/Content/ui/themes/default/easyui.css}" rel="stylesheet" />
+    <!--  end Jquery ui -->
+
+    <!--  --->
+    <link th:href="@{/Content/css/main.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/Content/css/inside.css}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--Page-->
+    <div class="page">
+        <form name="frmform" method="post">
+            <!--Panel top-->
+            <div class="paneltop">
+                <!--Phan to-->
+                <!--Phan banner-->
+                <div class="banner">
+                    <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686261/banner_UTE_hmkkep.png" /></div>
+                <!--Phan menu2-->
+                <div class="blog_menu2">
+                    <div class="img1_menu2">
+                        <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/img2_menu2_dpqtjo.jpg" /></div>
+                    <ul class="menu2">
+                        <li><a>Sinh viên: [[${name}]] <span></span> </a></li>
+                        <li id="id_menu2">  <a th:if="${#request.userPrincipal != null}" th:href="@{/logout}">Thoát</a></li>
+
+                    </ul>
+                    <div class="img2_menu2">
+                        <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/img2_menu2_dpqtjo.jpg" /></div>
+                </div>
+                <!--Phan menu3-->
+                <div class="blog_menu3">
+                    <div class="img1_menu3">
+                        <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/img1_menu3_tlfago.jpg" class="img1_menu2" /></div>
+                    <ul class="menu3">
+                        <li>
+                            <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686268/hoa_mx95xq.png" class="img" /><a th:href="@{/}">ĐĂNG KÝ HỌC PHẦN
+                        <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686261/ARROW_pwgner.png" />
+                        <span>Đăng kí ngoài chương trình đào tạo</span></a></li>
+                    </ul>
+                    <div class="img2_menu3">
+                        <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/img2_menu3_nng58d.jpg" class="img2_menu2" /></div>
+                </div>
+
+
+                <!--Phan quang cao va menu-->
+            </div>
+            <!--End Panel top-->
+            <!--container-->
+            <div class="container">
+                <!--Panel lef-->
+                <div class="info_container">
+                    <div class="panelleft1">
+                        <div class="blog_menu4_HP">
+
+                        </div>
+
+                        <!--Phan PanelBarmenu2-->
+                    </div>
+
+                        <div style="margin: auto; max-width: 1200px; width:100%" >
+                            <div class="wrapper_vb">
+
+                                <div id="DanhSachLop">
+                                    <table border="0" width="100%" style="margin: auto">
+                                        <tr>
+                                            <td><b class="title">ĐĂNG KÝ CHƯƠNG TRÌNH ĐÀO TẠO</b></td>
+                                        </tr>
+
+
+                                        <tr>
+
+                                            <td align="center">
+                                                <form th:action="@{/registersubjects}" class="form-inline m-3" method="post" >
+                                                    <b>Nhập mã môn học : </b>
+                                                    <input type="text" title="Nhập mã môn học để tìm kiếm ..."
+                                                           style="width:200px" placeholder="Nhập mã môn học để tìm kiếm ..."
+                                                           name="keyword" id="txtSearch" class="txttext"
+                                                           th:value="${keyword}"
+                                                    />
+                                                    <input type="submit" title="Tìm môn học" name="btntim" class="button" id="btntim" value="Tìm kiếm" />
+                                                    <br/>
+                                                    <div style="text-align: center; color: red">( Để đăng ký môn học sinh viên phải gõ “tên môn học” vào ô textbox ở trên sau đó ấn nút “Tìm kiếm” )</div>
+                                                </form>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><b style="color: red"></b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div> / </div>
+                                                <fieldset style="padding: 10px 10px 10px 10px">
+                                                    <legend>Học phần : <b style="color: blue"> </b></legend>
+                                                    <table width="100%" border="1" cellpadding="10" style="border-collapse: collapse; font-size: 12px">
+                                                        <tr>
+                                                            <th>ID</th>
+                                                            <th>Loại LHP</th>
+                                                            <th>Lớp học phần</th>
+                                                            <th>STC</th>
+                                                            <!--                                                        <th>Giới hạn</th>-->
+                                                            <!--                                                        <th>Đăng ký</th>-->
+                                                            <!--                                                        <th>Giảng viên</th>-->
+                                                            <th></th>
+                                                        </tr>
+                                                        <tr class="row_w" th:each="subject : ${listSubjects}" >
+                                                            <td class="col1" width="70px">[[${subject.id}]]</td>
+                                                            <td class="col3">[[${subject.nameSubject}]]</td>
+                                                            <td class="col4">[[${subject.categorySubject}]]</td>
+                                                            <td class="col4">[[${subject.totalCredits}]]</td>
+                                                            <td class="col4">
+                                                                <form method="GET" th:action="@{'/registersubjects/'+${subject.id}}">
+                                                                    <button type="submit" >Thêm</button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </fieldset>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div id="DanhSachChon">
+                                </div>
+                                <div style="height: 10px"></div>
+
+                                <div style="height: 10px"></div>
+                                <div>
+                                    <fieldset style="padding: 10px 10px 10px 10px">
+                                        <legend><b style="color: blue">Phiếu đăng ký môn học</b></legend>
+                                        <div id="DanhSachHocPhanDaDangKi">
+
+                                            <table width="100%" border="1" cellpadding="10" style="border-collapse: collapse; font-size: 12px">
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Loại LHP</th>
+                                                    <th>Lớp học phần</th>
+                                                    <th>STC</th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr class="row_w" th:each="subject : ${listdk}" >
+                                                    <td class="col1" width="70px">[[${subject.id}]]</td>
+                                                    <td class="col3">[[${subject.nameSubject}]]</td>
+                                                    <td class="col4">[[${subject.categorySubject}]]</td>
+                                                    <td class="col4">[[${subject.totalCredits}]]</td>
+                                                    <td class="col4">
+                                                        <form method="get" th:action="@{'/registersubjects/delete/'+${subject.id}}">
+                                                            <button type="submit" >Xóa</button>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            </tr>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+
+                            </div>
+                        </div>
+
+                </div>
+                <!--End info_container-->
+            </div>
+            <!--end contaianer-->
+        </form>
+
+        <!--footer-->
+        <div class="panelbottom">
+            <div class="content_bottom">
+                <div class="trai">
+                    <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/letf_bottom_ab9bbw.jpg" /></div>
+                <div class="thongtin">
+                    <span class="tentruong">TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM</span>
+                    <br />
+                    <span>S&#244;́ 1 Võ Văn Ng&#226;n , Qu&#226;̣n Thủ Đức, TP.HCM</span>
+                    <br />
+                    <span>Điện thoại: (84-8) 37221223</span>
+                </div>
+                <div class="phai">
+                    <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/right_bottom_qoxfmq.jpg" /></div>
+            </div>
+            <div class="version">
+                <div class="info_ver"><a href="#">Bản quyền (C) 2021 TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM  - Phát triển bởi PSC UIS   </a></div>
+            </div>
+        </div>
+        <!--end footer-->
+    </div>
+    <!--End Page-->
+</body>
+
+</html>

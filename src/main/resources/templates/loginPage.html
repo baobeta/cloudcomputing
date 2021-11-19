@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <link rel="icon" href="/Content/Images/favicon.ico" type="image/x-icon" />
+    <title>TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM - Trang đăng kí học ph&#226;̀n</title>
+    <meta http-eqyuiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="/Content/css/style_main.css" rel="stylesheet" />
+    <script th:src="@{/Scripts/jquery-1.7.1.js}"></script>
+    <script th:src="@{/Content/ui/jquery.easyui.min.js}"></script>
+    <link th:href="@{/Content/ui/themes/default/easyui.css}" rel="stylesheet" />
+    <link th:href="@{/Content/css/main.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/Content/css/inside.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/Content/css/login.css}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--Page-->
+    <div class="page">
+            <!--Panel top-->
+            <div class="paneltop">
+                <!--Phan to-->
+                <!--Phan banner-->
+                <div class="banner">
+                    <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686261/banner_UTE_hmkkep.png" /></div>
+
+                <div class="blog_menu3">
+                    <div class="img1_menu3">
+                        <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/img1_menu3_tlfago.jpg" class="img1_menu2" /></div>
+                    <ul class="menu3">
+                        <li>
+                            <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686268/hoa_mx95xq.png" class="img" /><a href="#">ĐĂNG KÝ HỌC PHẦN
+                 <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686261/ARROW_pwgner.png" />
+                 <span>Đăng nhập</span></a></li>
+                    </ul>
+                    <div class="img2_menu3">
+                        <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/img2_menu3_nng58d.jpg" class="img2_menu2" /></div>
+                </div>
+
+
+                <!--Phan quang cao va menu-->
+            </div>
+            <!--End Panel top-->
+            <div th:if="${#request.getParameter('error') == 'true'}"
+                 style="color:red;margin:10px 0px;">
+                Login Failed!!!<br />
+                Reason :
+                <span th:if="${#session!= null and #session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION') != null}"
+                      th:utext="${#session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION').message}">
+                Static summary
+         </span>
+
+            </div>
+            <!--container-->
+            <div class="container" style="padding: 100px;" >
+                <table style="width: 100%; height: 100%">
+                    <tr valign="middle">
+                        <td align="center" valign="middle" style="height: 100%">
+                            <table cellpadding="0" cellspacing="0" class="loginmodule_table_dl" width="450" >
+                                <div id="ctl00_ContentPlaceHolder1_ctl00_ctl00_pnldangnhap">
+
+                                    <tr>
+                                        <td colspan="2">
+                                            <table cellpadding="0" cellspacing="0" class="loginmodule_table_Bottom_dl" width="100%">
+                                                <tr align="center">
+                                                    <td class="loginmodule_header_dl" style="height: 19px" align="center">Đăng nhập</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                </div>
+
+                                <tr>
+                                    <td id="ctl00_ContentPlaceHolder1_ctl00_ctl00_tdError" colspan="2" style="width: 100%"></td>
+
+                                </tr>
+                                <tr>
+                                    <td align="center" style="height: 133px" valign="middle">
+                                        <form name='f' th:action="@{/j_spring_security_check}" method='POST'>
+                                        <table id="Table2" border="0" cellpadding="2" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td align="right" style="width: 35%" valign="bottom">
+                                                    <span id="ctl00_ContentPlaceHolder1_ctl00_ctl00_Label2" class="bold_text">Tên đăng nhập:</span></td>
+                                                <td align="left" style="width: 65%" valign="bottom">
+                                                    <input type='text' name='username' value=''>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right" style="width: 35%" valign="bottom">
+                                                    <span id="ctl00_ContentPlaceHolder1_ctl00_ctl00_Label3" class="bold_text">Mật mã: </span></td>
+                                                <td align="left" style="width: 65%" valign="bottom">
+                                                    <input type='password' name='password' /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Remember Me?</td>
+                                                <td><input type="checkbox" name="remember-me" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input name="submit" type="submit" value="submit" /></td>
+                                            </tr>
+                                        </table>
+                                        </form>
+
+                                    </td>
+                                    <td>
+                                        <br>
+                                        Username/pass:
+                                        <ul>
+                                            <li>dbuser1/123</li>
+                                            <li>dbadmin1/123</li>
+                                        </ul>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--end contaianer-->
+
+        <!--footer-->
+        <div class="panelbottom">
+            <div class="content_bottom">
+                <div class="trai">
+                    <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/letf_bottom_ab9bbw.jpg" /></div>
+                <div class="thongtin">
+                    <span class="tentruong">TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM</span>
+                    <br />
+                    <span>S&#244;́ 1 Võ Văn Ng&#226;n , Qu&#226;̣n Thủ Đức, TP.HCM</span>
+                    <br />
+                    <span>Điện thoại: (84-8) 37221223</span>
+                </div>
+                <div class="phai">
+                    <img src="https://res.cloudinary.com/dfkpopvkp/image/upload/v1636686260/right_bottom_qoxfmq.jpg" /></div>
+            </div>
+            <div class="version">
+                <div class="info_ver"><a href="#">Bản quyền (C) 2021 TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM  - Phát triển bởi PSC UIS   </a></div>
+            </div>
+        </div>
+        <!--end footer-->
+    </div>
+    <!--End Page-->
+</body>
+
+</html>
+
+</html>
