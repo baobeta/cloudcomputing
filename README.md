@@ -30,16 +30,16 @@ Dưới đây là phần chi tiết đóng gói ứng dụng.
 
 
 >Trong đó :
->>_app : là service chứa các container ứng dụng web_
- _db : là service chứa container database_
- _redis : là service database giúp lưu trữ cache và các session giúp container giữ trạng thái stateless_ 
-_image: xác định tên image để tạo container_
-_deploy: tùy chọn cấu hình cho việc triển khai_
-_replicas: Số lượng bản sao container_
-_constraints: [node.role == worker/manager] → Xác định container sẽ được triển khai ở host nào trong docker swarm. Ở đây, chúng ta xác định vị trí docker host theo vai trò manager/worker trong docker swarm._
-_volumes: để mount  giữa docker host và container._
-
-Ở service “app”, khai báo một số biến ENV để tạo thông tin database như: MYSQL_HOST, REDIS_HOST… Sau khi tạo và chạy stack, chúng ta có thể kiểm tra kết nối web và db.
+>- _app : là service chứa các container ứng dụng web_
+> - _db : là service chứa container database_ 
+>- _redis : là service database giúp lưu trữ cache và các session giúp container giữ trạng thái stateless_ 
+>- _image: xác định tên image để tạo container_
+>- _deploy: tùy chọn cấu hình cho việc triển khai_
+>- _replicas: Số lượng bản sao container_
+>- _constraints: [node.role == worker/manager] → Xác định container sẽ được triển khai ở host nào trong docker swarm. Ở đây, chúng ta xác định vị trí docker host theo vai trò manager/worker trong docker swarm._
+>- _volumes: để mount  giữa docker host và container._
+>
+>Ở service “app”, khai báo một số biến ENV để tạo thông tin database như: MYSQL_HOST, REDIS_HOST… Sau khi tạo và chạy stack, chúng ta có thể kiểm tra kết nối web và db.
 
 - **Thực hiện deploy docker stack, sử dụng lệnh sau**:
 
