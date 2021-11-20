@@ -1,0 +1,38 @@
+version: '3.7'
+services:
+  app:
+    image: hungfq/dkmh:1.4.2
+    deploy:
+        placement:
+          constraints: [node.role == worker]
+    ports:
+      - "8088:8088" 
+    depends_on: 
+      - db 
+      - redis
+    environment: 
+      MYSQL_HOST: db
+      REDIS_HOST: redis
+    networks: 
+      - mynet
+  db:
+    image: hungfq/newsql:1.0
+    deploy:
+        placement:
+          constraints: [node.role == manager]
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - mynet
+  redis:
+    image: hungfq/redis:1.0
+    deploy:
+        placement:
+          constraints: [node.role == manager]
+    networks:
+      - mynet
+volumes:
+  db-data:
+networks:
+  mynet:
+    driver: overlay
