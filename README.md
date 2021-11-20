@@ -1,8 +1,8 @@
-# Đề tài: Xây dựng hệ thống cloud mô phỏng trang đăng kí môn học, ứng dụng trang đăng kí môn học.
+# Đề tài: Xây dụng hệ thống Cloud mô phỏng trang đăng ký môn học có thể tự scale up, scale down
 
 
 
-Thành viên nhóm :
+Thành viên nhóm 29:
 
  1. Lê Quốc Bảo       -    19110327
  2. Phạm Quang Hưng   -    19110373
