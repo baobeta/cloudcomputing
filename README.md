@@ -23,7 +23,7 @@ Dưới đây là phần chi tiết đóng gói ứng dụng.
 
 - **Sử dụng docker file đã chứa trong repo (`Dockerfile` )để đóng gói thành image**
 
->     docker build . -t  hungfq/dkmh:1.4.2
+>     docker build . -t  hungfq/dkmh:1.4.3
 
 
 - **Tạo file docker compose dkmh.yml . File này ở nằm ở trong repo. Trong file này định nghĩa 3 service: app, db, redis.** 

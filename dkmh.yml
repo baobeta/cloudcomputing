@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   app:
-    image: hungfq/dkmh:1.4.2
+    image: hungfq/dkmh:1.5
     deploy:
         placement:
           constraints: [node.role == worker]
@@ -11,17 +11,18 @@ services:
       - db 
       - redis
     environment: 
-      MYSQL_HOST: db
+      DB_HOST: db
       REDIS_HOST: redis
     networks: 
       - mynet
   db:
-    image: hungfq/newsql:1.0
+    image: hungfq/maria:1.2.1
     deploy:
         placement:
-          constraints: [node.role == manager]
-    volumes:
-      - db-data:/var/lib/mysql
+          constraints: [node.role == worker]
+    environment: 
+      MYSQL_ROOT_PASSWORD: 1234
+      DB_SERVICE_NAME: dkmh_db
     networks:
       - mynet
   redis:
@@ -31,8 +32,6 @@ services:
           constraints: [node.role == manager]
     networks:
       - mynet
-volumes:
-  db-data:
 networks:
   mynet:
     driver: overlay
