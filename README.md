@@ -11,7 +11,15 @@ Thành viên nhóm 29:
 - - -
 Đây là đề tài cuối kì xây dựng hệ thống Cloud mô phỏng trang đăng kí môn học có thể tự scale up, scale down. Ở đề tài này, áp dụng tính năng của Docker Swarm, giúp hệ thống có thể load blancing, high availability. Đề tài này sử dụng prometheus được ghép nối với số liệu cadvisor để xác định mức sử dụng cpu. Sau đó, nó sử dụng nút người quản lý để xác định xem một dịch vụ có muốn được auto scale hay không và sử dụng node manager để scale service.
 Hiện tại dự án chỉ sử dụng cpu để autoscale. Nếu mức sử dụng cpu đạt 85%, dịch vụ sẽ scale up, nếu đạt 25%, dịch vụ sẽ scale down.
-**Note:**  Trên đây là là toàn bộ source code. Nội dung của ứng dụng đã được đóng gói thành các docker image để trên docker hub, Được để sẵn trong file docker compose, chỉ cần chạy deploy stack là có thể hoạt động được.
+
+
+Một số công nghệ sử dụng trong dự án:
+- Spring Boot Framework
+- MariaDB Galera Cluster
+- Redis Database
+- Docker Swarm
+
+> **Note:**  Trên đây là là toàn bộ source code. Nội dung của ứng dụng đã được đóng gói thành các docker image để trên docker hub, Được để sẵn trong file docker compose, chỉ cần chạy deploy stack là có thể hoạt động được.
 ## 1. Phần hệ thống
 Trong bài này, thì hệ thống sử dụng các ứng dụng để dám sát hệ thống:
 - **cAdvisor (Container Advisor)** cung cấp cho người dùng container sự hiểu biết về việc sử dụng tài nguyên và đặc điểm hiệu suất của các container đang chạy của họ. Đây là một daemon đang chạy thu thập, tổng hợp, quy trình và xuất khẩu thông tin về các container đang chạy. Cụ thể, đối với mỗi container, nó giữ các thông số cách ly tài nguyên, sử dụng tài nguyên lịch sử, biểu đồ sử dụng tài nguyên lịch sử hoàn chỉnh và thống kê mạng. Dữ liệu này được xuất khẩu bằng container và trên toàn máy.
@@ -85,3 +93,12 @@ deploy:
 >     docker stack deploy -c swarm-autoscaler-stack.yml autoscaler
 2. Sau đó tiến hành chạy app bằng lệnh:
 >     docker stack deploy -c dkmh.yml dkmh
+
+
+## 4. Tài liệu tham khảo
+1. [Autoscale Docker Swarm services based on cpu utilization. (github.com)](https://github.com/jcwimer/docker-swarm-autoscaler)
+2. [Getting Started | Spring Boot with Docker](https://spring.io/guides/gs/spring-boot-docker/)
+3. [toughiq/mariadb-cluster - Docker Image | Docker Hub](https://hub.docker.com/r/toughiq/mariadb-cluster)
+4. [prom/prometheus - Docker Image | Docker Hub](https://hub.docker.com/r/prom/prometheus)
+5. [google/cadvisor - Docker Image | Docker Hub](https://hub.docker.com/r/google/cadvisor/)
+6. [Redis - Official Image | Docker Hub](https://hub.docker.com/_/redis)
