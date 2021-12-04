@@ -6,25 +6,35 @@ services:
         placement:
           constraints: [node.role == worker]
     ports:
-      - "8088:8088" 
-    depends_on: 
-      - db 
+      - "8088:8088"
+    depends_on:
+      - db
       - redis
-    environment: 
+    environment:
       DB_HOST: db
       REDIS_HOST: redis
-    networks: 
+    networks:
       - mynet
+    deploy:
+      labels:
+        swarm.autoscaler: 'true'
+        swarm.autoscaler.maximum: '6'
+        swarm.autoscaler.minimum: '3'
   db:
     image: hungfq/maria:1.2.1
     deploy:
         placement:
           constraints: [node.role == worker]
-    environment: 
+    environment:
       MYSQL_ROOT_PASSWORD: 1234
       DB_SERVICE_NAME: dkmh_db
     networks:
       - mynet
+    deploy:
+      labels:
+        swarm.autoscaler: 'true'
+        swarm.autoscaler.maximum: '6'
+        swarm.autoscaler.minimum: '1'
   redis:
     image: hungfq/redis:1.0
     deploy:
