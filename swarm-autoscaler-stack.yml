@@ -9,7 +9,7 @@ configs:
 
 services:
   docker-swarm-autoscaler:
-    image:  jcwimer/docker-swarm-autoscaler:0.1.0
+    image:  lequocbao29072001/autoscaler:1.0
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
