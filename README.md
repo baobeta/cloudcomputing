@@ -27,7 +27,7 @@ Trong bài này, thì hệ thống sử dụng các ứng dụng để dám sát
 Ở đây, Prometheus sẽ giám sát các thông số được cập nhật từ các container thông cAdvisor, từ số liệu đó sẽ kiểm tra hiệu năng của cpu, sau đó thiết lập các luật để để có thể scale up và scale down. 
 Các cấu hình được đóng gói thành image docker-swarm-autoscaler. Cấu hình được để trong thư mục docker-swarm-autoscaler. 
 - **Phần đóng gói câu hình sử dụng cú pháp:**
->     docker build . -t  hungfq/docker-swarm-autoscaler:1.0.0
+>     docker build . -t  lequocbao29072001/autoscaler:1.0
  - **Tạo file prometheus.yml chứa các thông tin cấu hình của prometheus (file đã chứa trong repository này)**
  - **Tạo file docker-swarm-autoscaler.yml chứa cấu hình các ứng dụng để triển khai giám sát hệ thống(file đã chứa trong repository này)**
  - **Thực hiện deploy docker stack, sử dụng lệnh sau**:
