@@ -95,6 +95,8 @@ deploy:
 >     docker stack deploy -c swarm-autoscaler-stack.yml autoscaler
 2. Sau đó tiến hành chạy app bằng lệnh:
 >     docker stack deploy -c dkmh.yml dkmh
+3. Sử dụng visualizer để xem kiểm soát container dễ dàng hơn.
+>     docker run -it -d -p 8888:8080 -v /var/run/docker.sock:/var/run/docker.sock dockersamples/visualizer
 
 
 ## 4. Tài liệu tham khảo
@@ -104,3 +106,4 @@ deploy:
 4. [prom/prometheus - Docker Image | Docker Hub](https://hub.docker.com/r/prom/prometheus)
 5. [google/cadvisor - Docker Image | Docker Hub](https://hub.docker.com/r/google/cadvisor/)
 6. [Redis - Official Image | Docker Hub](https://hub.docker.com/_/redis)
+7. [Docker visualizer](https://github.com/dockersamples/docker-swarm-visualizer)
