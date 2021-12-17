@@ -30,8 +30,7 @@ services:
       DB_SERVICE_NAME: dkmh_db
     networks:
       - mynet
-    volumes:
-      - ${PWD}/mariadb:/var/lib/mysql
+
     deploy:
       labels:
         swarm.autoscaler: 'true'
