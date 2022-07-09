@@ -1,13 +1,5 @@
 # Đề tài: Xây dụng hệ thống Cloud mô phỏng trang đăng ký môn học có thể tự scale up, scale down
 
-
-
-Thành viên nhóm 29:
-
- 1. Lê Quốc Bảo       -    19110327
- 2. Phạm Quang Hưng   -    19110373
- 3. Lương Quốc Trung  -    19110489
-
 - - -
 Đây là đề tài cuối kì xây dựng hệ thống Cloud mô phỏng trang đăng kí môn học có thể tự scale up, scale down. Ở đề tài này, áp dụng tính năng của Docker Swarm, giúp hệ thống có thể load blancing, high availability. Đề tài này sử dụng prometheus được ghép nối với số liệu cadvisor để xác định mức sử dụng cpu. Sau đó, nó sử dụng nút người quản lý để xác định xem một dịch vụ có muốn được auto scale hay không và sử dụng node manager để scale service.
 Hiện tại dự án chỉ sử dụng cpu để autoscale. Nếu mức sử dụng cpu đạt 30%, dịch vụ sẽ scale up, nếu đạt 10%, dịch vụ sẽ scale down.
